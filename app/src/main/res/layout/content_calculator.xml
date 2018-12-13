@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context=".Calculator"
+    tools:showIn="@layout/activity_calculator">
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="fill_parent"
+        android:layout_height="133dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="328dp"
+        android:background="@android:color/background_dark"
+        android:text="0.0"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/nr9"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickNumber"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/nr6"
+        app:layout_constraintEnd_toStartOf="@+id/plus"
+        app:layout_constraintStart_toEndOf="@+id/nr8"
+        app:layout_constraintTop_toBottomOf="@+id/score" />
+
+    <Button
+        android:id="@+id/X"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickOperator"
+        android:text="X"
+        app:layout_constraintBottom_toTopOf="@+id/division"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nr1"
+        app:layout_constraintTop_toBottomOf="@+id/minus" />
+
+    <Button
+        android:id="@+id/division"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickOperator"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/count"
+        app:layout_constraintTop_toBottomOf="@+id/X" />
+
+    <Button
+        android:id="@+id/count"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickEqual"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/X"
+        app:layout_constraintStart_toEndOf="@+id/nr0"
+        app:layout_constraintTop_toBottomOf="@+id/nr1" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickOperator"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nr9"
+        app:layout_constraintTop_toBottomOf="@+id/score" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickOperator"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/X"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nr6"
+        app:layout_constraintTop_toBottomOf="@+id/plus" />
+
+    <Button
+        android:id="@+id/nr6"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickNumber"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/nr1"
+        app:layout_constraintEnd_toStartOf="@+id/minus"
+        app:layout_constraintStart_toEndOf="@+id/nr5"
+        app:layout_constraintTop_toBottomOf="@+id/nr9" />
+
+    <Button
+        android:id="@+id/nr1"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickNumber"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/count"
+        app:layout_constraintEnd_toStartOf="@+id/X"
+        app:layout_constraintStart_toEndOf="@+id/nr2"
+        app:layout_constraintTop_toBottomOf="@+id/nr6" />
+
+
+    <Button
+        android:id="@+id/nr7"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickNumber"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/nr4"
+        app:layout_constraintEnd_toStartOf="@+id/nr8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score" />
+
+    <Button
+        android:id="@+id/nr4"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickNumber"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/nr3"
+        app:layout_constraintEnd_toStartOf="@+id/nr5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nr7" />
+
+    <Button
+        android:id="@+id/nr3"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickNumber"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/C"
+        app:layout_constraintEnd_toStartOf="@+id/nr2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nr4" />
+
+    <Button
+        android:id="@+id/C"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickClear"
+        android:text="C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nr0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nr3" />
+
+    <Button
+        android:id="@+id/nr0"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickNumber"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/count"
+        app:layout_constraintStart_toEndOf="@+id/C"
+        app:layout_constraintTop_toBottomOf="@+id/nr2" />
+
+    <Button
+        android:id="@+id/nr2"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickNumber"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/nr0"
+        app:layout_constraintEnd_toStartOf="@+id/nr1"
+        app:layout_constraintStart_toEndOf="@+id/nr3"
+        app:layout_constraintTop_toBottomOf="@+id/nr5" />
+
+    <Button
+        android:id="@+id/nr5"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickNumber"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/nr2"
+        app:layout_constraintEnd_toStartOf="@+id/nr6"
+        app:layout_constraintStart_toEndOf="@+id/nr4"
+        app:layout_constraintTop_toBottomOf="@+id/nr8" />
+
+    <Button
+        android:id="@+id/nr8"
+        android:layout_width="91.75dp"
+        android:layout_height="81.25dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:onClick="onClickNumber"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/nr5"
+        app:layout_constraintEnd_toStartOf="@+id/nr9"
+        app:layout_constraintStart_toEndOf="@+id/nr7"
+        app:layout_constraintTop_toBottomOf="@+id/score" />
+
+</android.support.constraint.ConstraintLayout>
